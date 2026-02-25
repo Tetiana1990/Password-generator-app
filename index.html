@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Password-generator-app</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<main class="container">
+		<h1>Password Generator</h1>
+
+		<div class="password-box">
+			<input type="text" id="password" readonly aria-label="Generator password"/>
+			<button id="copyBtn" class="icon-btn" aria-label="Copy password to clipboard">
+				<img src="images/icon-copy.svg" alt="">
+			</button>
+		</div>
+		<section class="settings">
+			<div class="length-box">
+				<div class="length-header"><span> Character Length</span><span id="lengthValue">10</span></div>
+			<input type="range" id="length" min="4" max="20" value="10" aria-label="Password length"/>
+			</div>
+			<label class="checkbox"><input type="checkbox" id="uppercase" checked />  Include Uppercase Letters</label>
+			<label class="checkbox"><input type="checkbox" id="lowercase" checked />  Include Lowercase Letters</label>
+			<label class="checkbox"><input type="checkbox" id="numbers" checked />  Include Numbers</label>
+			<label class="checkbox"><input type="checkbox" id="symbols" />   Include Symbols</label>
+			<div class="strength-box" role="status" aria-live="polite"><span>Strength</span>
+				<div class="strength-indicator"><span id="strengthText">MEDIUM</span>
+				<div class="bars">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</div>
+				</div>
+			</div>
+			<button id="generateBtn" class="generate">Generate <span>&#8594;</span></button>
+		</section>
+	</main>
+	
+	<script src="js/script.js"></script>
+</body>
+</html>

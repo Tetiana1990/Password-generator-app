@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Cascadia Mono", sans-serif;
+}
+
+body {
+  background: #0f0f14;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #aaa;
+  font-size: 1.7rem;
+}
+
+.password-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1e1e28;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.password-box input {
+  background: transparent;
+  border: none;
+  color: #a4ffaf;
+  font-size: 1.2rem;
+  width: 100%;
+  outline: none;
+  transition: opacity 0.3s ease;
+}
+
+.password-box input.updated {
+  opacity: 0.4;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #a4ffaf;
+}
+
+.icon-btn:focus {
+  outline: 2px solid #a4ffaf;
+  outline-offset: 2px;
+}
+
+.settings {
+  background: #1e1e28;
+  padding: 1.5rem;
+}
+
+.length-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+input[type=range] {
+  width: 100%;
+  accent-color: #a4ffaf;
+  margin-bottom: 1rem;
+}
+
+.checkbox {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.checkbox input {
+  accent-color: #a4ffaf;
+}
+
+.strength-box {
+  background: #14141c;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.strength-indicator {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bars {
+  display: flex;
+  gap: 4px;
+}
+
+.bar {
+  width: 8px;
+  height: 20px;
+  background: #444;
+  transition: all 0.3s ease;
+}
+
+bar.active {
+  transform: scaleY(1.2);
+}
+
+.generate {
+  width: 100%;
+  padding: 1rem;
+  background: #a4ffaf;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.generate:hover {
+  background: #85e892;
+}
+
+.generate:active {
+  transform: scale(0.97);
+}
+
+.generate:focus {
+  outline: 2px solid white;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 4rem;
+  }
+}
